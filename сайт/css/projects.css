@@ -1,0 +1,716 @@
+/*
+  Страницы кейсов: «Панк», «Существо», «Колба», «Дом Марселин», «Гном».
+  --case-gutter-left / --case-gutter-right — боковые поля контентной колонки (по макету Figma).
+*/
+body.body--punk,
+body.body--creature,
+body.body--kolba,
+body.body--house,
+body.body--gnome{
+  background: var(--bg);
+}
+
+.punk-shell{
+  position: relative;
+  width: 100%;
+  max-width: none;
+}
+
+.page--punk{
+  position: relative;
+  z-index: 1;
+  max-width: 1920px;
+  padding: 48px 0 60px;
+  box-sizing: border-box;
+}
+
+.page--punk > .contact{
+  position: relative;
+  z-index: 1;
+  padding-top: 0;
+}
+
+.page--creature,
+.page--kolba,
+.page--house,
+.page--gnome{
+  position: relative;
+  z-index: 1;
+  max-width: 1920px;
+  padding: 48px 0 60px;
+  box-sizing: border-box;
+}
+
+.page--creature > .contact,
+.page--kolba > .contact,
+.page--house > .contact,
+.page--gnome > .contact{
+  position: relative;
+  z-index: 1;
+  padding-top: 0;
+}
+
+.creature-shell,
+.kolba-shell,
+.house-shell,
+.gnome-shell{
+  position: relative;
+  width: 100%;
+  max-width: none;
+}
+
+.creature-main,
+.kolba-main,
+.house-main,
+.gnome-main{
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  color: var(--text);
+}
+
+.creature-main__title,
+.kolba-main__title,
+.house-main__title,
+.gnome-main__title{
+  margin: 0 0 32px;
+  text-align: center;
+  font-size: clamp(42px, 5vw, 96px);
+  line-height: 1.08;
+  letter-spacing: .02em;
+}
+
+.creature-main__track,
+.kolba-main__track,
+.house-main__track,
+.gnome-main__track{
+  width: 100%;
+  margin: 0;
+  --case-gutter-left: 262px;
+  --case-gutter-right: 24px;
+  padding-left: var(--case-gutter-left);
+  padding-right: var(--case-gutter-right);
+  box-sizing: border-box;
+}
+
+.creature-main__track > * + *,
+.kolba-main__track > * + *,
+.house-main__track > * + *,
+.gnome-main__track > * + *{
+  margin-top: 0;
+}
+
+.creature-main__track > .creature-main__row--2 + .creature-main__split,
+.house-main__track > .house-main__row--2 + .house-main__split{
+  margin-top: 140px;
+}
+
+.kolba-main__track > .kolba-main__row--2 + .kolba-main__text--wide,
+.gnome-main__track > .gnome-main__row--2 + .gnome-main__text--wide{
+  margin-top: 140px;
+}
+
+.creature-main__track > .creature-main__split + .creature-main__text--wide,
+.house-main__track > .house-main__split + .house-main__text--wide{
+  margin-top: 140px;
+}
+
+.creature-main__track > .creature-main__text--wide + .creature-main__programs,
+.kolba-main__track > .kolba-main__text--wide + .kolba-main__programs,
+.house-main__track > .house-main__text--wide + .house-main__programs,
+.gnome-main__track > .gnome-main__text--wide + .gnome-main__programs{
+  margin-top: 140px;
+}
+
+.creature-main__row--2,
+.kolba-main__row--2,
+.house-main__row--2,
+.gnome-main__row--2{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 828px));
+  gap: 24px;
+  justify-content: center;
+  justify-items: center;
+  align-items: start;
+  box-sizing: border-box;
+  width: min(1680px, 100%);
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  transform: translateX(calc((var(--case-gutter-left) - var(--case-gutter-right)) / -2));
+}
+
+.creature-main__photo,
+.kolba-main__photo,
+.house-main__photo,
+.gnome-main__photo{
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  object-fit: cover;
+}
+
+.creature-main__photo--hero,
+.kolba-main__photo--hero,
+.house-main__photo--hero,
+.gnome-main__photo--hero{
+  aspect-ratio: 828 / 722;
+}
+
+.creature-main__split,
+.house-main__split{
+  display: flex;
+  gap: 163px;
+  margin: 0;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.creature-main__split{
+  align-items: flex-start;
+}
+
+.house-main__split{
+  align-items: center;
+}
+
+.creature-main__split-text,
+.house-main__split-text{
+  flex: 0 0 auto;
+  width: 544px;
+  max-width: 100%;
+  min-height: 0;
+  box-sizing: border-box;
+}
+
+.creature-main__split-text p,
+.house-main__split-text p{
+  margin: 0 0 1.35em;
+}
+
+.creature-main__split-text p:last-child,
+.house-main__split-text p:last-child{
+  margin-bottom: 0;
+}
+
+.creature-main__text,
+.kolba-main__text,
+.house-main__text,
+.gnome-main__text{
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.38;
+  font-weight: 400;
+}
+
+.creature-main__photo--side,
+.house-main__photo--side{
+  flex: 0 0 auto;
+  width: min(686px, 100%);
+  max-width: 686px;
+  aspect-ratio: 686 / 568;
+}
+
+.creature-main__text--wide,
+.kolba-main__text--wide,
+.house-main__text--wide,
+.gnome-main__text--wide{
+  width: 1254px;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.creature-main__text--wide > .creature-main__text{
+  margin: 0 0 1.35em;
+}
+
+.creature-main__text--wide > .creature-main__text:last-child{
+  margin-bottom: 0;
+}
+
+.kolba-main__text--wide > .kolba-main__text{
+  margin: 0 0 1.35em;
+}
+
+.kolba-main__text--wide > .kolba-main__text:last-child{
+  margin-bottom: 0;
+}
+
+.gnome-main__text--wide > .gnome-main__text{
+  margin: 0 0 1.35em;
+}
+
+.gnome-main__text--wide > .gnome-main__text:last-child{
+  margin-bottom: 0;
+}
+
+.house-main__text--wide > .house-main__text{
+  margin: 0 0 1.35em;
+}
+
+.house-main__text--wide > .house-main__text:last-child{
+  margin-bottom: 0;
+}
+
+.creature-main__programs,
+.kolba-main__programs,
+.house-main__programs,
+.gnome-main__programs{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px 20px;
+  width: 100%;
+}
+
+.creature-main__programs-title,
+.kolba-main__programs-title,
+.house-main__programs-title,
+.gnome-main__programs-title{
+  margin: 0;
+  font-size: clamp(28px, 2.2vw, 40px);
+  line-height: 1.1;
+  flex-shrink: 0;
+}
+
+.creature-main__icons,
+.kolba-main__icons,
+.house-main__icons,
+.gnome-main__icons{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px 24px;
+}
+
+.creature-main__icons img,
+.kolba-main__icons img,
+.house-main__icons img,
+.gnome-main__icons img{
+  display: block;
+  object-fit: contain;
+}
+
+.page--creature .punk-project-nav,
+.page--kolba .punk-project-nav,
+.page--house .punk-project-nav,
+.page--gnome .punk-project-nav{
+  margin-top: 200px;
+  margin-bottom: 200px;
+  padding-top: 0;
+}
+
+.trees--punk{
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  min-height: 100%;
+  overflow: visible;
+}
+
+.tree--punk5{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  max-width: min(55vw, 720px);
+  max-height: min(85vh, 920px);
+  object-fit: contain;
+  object-position: right bottom;
+  pointer-events: none;
+  opacity: .88;
+}
+
+.punk-main{
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  color: var(--text);
+}
+
+.punk-main__title{
+  margin: 0 0 32px;
+  text-align: center;
+  font-size: clamp(42px, 5vw, 96px);
+  line-height: 1.08;
+  letter-spacing: .02em;
+}
+
+.punk-main__track{
+  width: 100%;
+  margin: 0;
+  --case-gutter-left: 262px;
+  --case-gutter-right: 24px;
+  padding-left: var(--case-gutter-left);
+  padding-right: var(--case-gutter-right);
+  box-sizing: border-box;
+}
+
+.punk-main__track > * + *{
+  margin-top: 0;
+}
+
+.punk-main__track > .punk-main__row--3 + .punk-main__split{
+  margin-top: 140px;
+}
+
+.punk-main__track > .punk-main__split + .punk-main__slider-block{
+  margin-top: 140px;
+}
+
+.punk-main__track > .punk-main__slider-block + .punk-main__text--after{
+  margin-top: 68px;
+}
+
+.punk-main__track > .punk-main__text--after + .punk-main__programs{
+  margin-top: 140px;
+}
+
+/* Три верхних фото: центр по полотну 1920 с учётом разных левого/правого поля трека */
+.punk-main__row--3{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 544px));
+  gap: 24px;
+  justify-content: center;
+  justify-items: center;
+  align-items: start;
+  box-sizing: border-box;
+  width: min(1680px, 100%);
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  transform: translateX(calc((var(--case-gutter-left) - var(--case-gutter-right)) / -2));
+}
+
+.punk-main__photo{
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow);
+  object-fit: cover;
+}
+
+.punk-main__split{
+  display: flex;
+  align-items: center;
+  gap: 62px;
+  margin: 0;
+  width: 100%;
+}
+
+.punk-main__split-text{
+  flex: 0 0 auto;
+  width: 791px;
+  max-width: 100%;
+  min-height: 0;
+  box-sizing: border-box;
+  align-self: center;
+}
+
+.punk-main__split-text p{
+  margin: 0 0 1.35em;
+}
+
+.punk-main__split-text p:last-child{
+  margin-bottom: 0;
+}
+
+.punk-main__text{
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.38;
+  font-weight: 400;
+}
+
+.punk-main__photo--side{
+  flex: 0 0 auto;
+  width: min(544px, 42%);
+  max-width: 544px;
+  aspect-ratio: 544 / 568;
+}
+
+.punk-main__slider-block{
+  margin: 0;
+  width: 100%;
+}
+
+.punk-slider{
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 4px 4px 12px;
+  cursor: grab;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.punk-slider.punk-slider--dragging{
+  cursor: grabbing;
+  scroll-behavior: auto;
+  user-select: none;
+}
+
+.punk-slider__slide{
+  flex: 0 0 auto;
+  width: min(544px, min(85vw, calc((100% - 48px) / 3)));
+  scroll-snap-align: start;
+}
+
+.punk-main__photo--short{
+  width: 100%;
+  aspect-ratio: 544 / 568;
+}
+
+.punk-main__text--after{
+  width: 1112px;
+  max-width: 100%;
+  box-sizing: border-box;
+  align-self: flex-start;
+  margin: 0;
+}
+
+.punk-main__text--after > .punk-main__text{
+  margin: 0 0 1.35em;
+}
+
+.punk-main__text--after > .punk-main__text:last-child{
+  margin-bottom: 0;
+}
+
+.punk-main__programs{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px 20px;
+  width: 100%;
+}
+
+.punk-main__programs-title{
+  margin: 0;
+  font-size: clamp(28px, 2.2vw, 40px);
+  line-height: 1.1;
+  flex-shrink: 0;
+}
+
+.punk-main__icons{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px 24px;
+}
+
+.punk-main__icons img{
+  display: block;
+  object-fit: contain;
+}
+
+.punk-project-nav{
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 16px 24px;
+  margin: 48px 0 40px;
+  padding-top: 8px;
+}
+
+.page--punk .punk-project-nav{
+  margin-top: 200px;
+  margin-bottom: 200px;
+  padding-top: 0;
+}
+
+.punk-project-nav > .punk-project-nav__link:first-child{
+  justify-self: start;
+}
+
+.punk-project-nav__label{
+  font-weight: 700;
+}
+
+.punk-project-nav__link{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--muted);
+  font-size: clamp(22px, 2vw, 40px);
+  line-height: 1.1;
+  border-radius: 12px;
+  padding: 6px 4px;
+  transition: color .15s ease;
+}
+
+.punk-project-nav__link:hover{
+  color: var(--text);
+}
+
+.punk-project-nav__link--center{
+  flex-direction: row;
+  justify-self: center;
+  gap: 10px;
+  color: var(--text);
+}
+
+.punk-project-nav__link--next{
+  justify-self: end;
+  flex-direction: row;
+}
+
+.punk-project-nav__up-icon{
+  width: 92px;
+  height: 38px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.punk-project-nav__link img:not(.punk-project-nav__up-icon){
+  flex-shrink: 0;
+  width: clamp(72px, 8vw, 126px);
+  height: auto;
+}
+
+@media (max-width: 1200px){
+  .punk-main__track{
+    --case-gutter-left: 24px;
+    --case-gutter-right: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .creature-main__track,
+  .kolba-main__track,
+  .house-main__track,
+  .gnome-main__track{
+    --case-gutter-left: 24px;
+    --case-gutter-right: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .punk-main__track > .punk-main__row--3 + .punk-main__split{
+    margin-top: 96px;
+  }
+
+  .punk-main__row--3{
+    grid-template-columns: 1fr;
+    gap: 24px;
+    width: 100%;
+  }
+
+  .punk-main__split{
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .punk-main__split-text{
+    width: 100%;
+  }
+
+  .punk-main__photo--side{
+    width: 100%;
+    max-width: 544px;
+    margin: 0 auto;
+  }
+
+  .punk-main__programs{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .punk-main__programs-title{
+    text-align: center;
+  }
+
+  .punk-main__icons{
+    justify-content: center;
+  }
+
+  .creature-main__row--2,
+  .kolba-main__row--2,
+  .house-main__row--2,
+  .gnome-main__row--2{
+    grid-template-columns: 1fr;
+    gap: 24px;
+    width: 100%;
+  }
+
+  .creature-main__split,
+  .house-main__split{
+    flex-direction: column;
+    align-items: stretch;
+    gap: 48px;
+  }
+
+  .creature-main__split-text,
+  .house-main__split-text{
+    width: 100%;
+  }
+
+  .creature-main__photo--side,
+  .house-main__photo--side{
+    width: 100%;
+    max-width: 686px;
+    margin: 0 auto;
+  }
+
+  .creature-main__programs,
+  .kolba-main__programs,
+  .house-main__programs,
+  .gnome-main__programs{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .creature-main__programs-title,
+  .kolba-main__programs-title,
+  .house-main__programs-title,
+  .gnome-main__programs-title{
+    text-align: center;
+  }
+
+  .creature-main__icons,
+  .kolba-main__icons,
+  .house-main__icons,
+  .gnome-main__icons{
+    justify-content: center;
+  }
+}
+
+@media (max-width: 900px){
+  .punk-project-nav{
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-items: center;
+  }
+
+  .punk-project-nav__link{
+    justify-self: center;
+    justify-content: center;
+  }
+}

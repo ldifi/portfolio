@@ -1,0 +1,85 @@
+*{ box-sizing: border-box; }
+html,body{ height: 100%; }
+body{
+  position: relative;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Goudy Old Style", "Goudy Old Style Regular", Georgia, "Times New Roman", serif;
+  overflow-x: hidden;
+}
+
+.font-display{
+  font-family: "CC Yuletide Log", "Goudy Old Style", Georgia, "Times New Roman", serif;
+  font-weight: 700;
+}
+
+.font-bold{
+  font-family: "Goudy Old Style", Georgia, "Times New Roman", serif;
+  font-weight: 700;
+}
+
+body.body--about{
+  background-color: var(--bg);
+  background-image: url("../img/bush.svg");
+  background-size: 2267px 1092px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.page{
+  position: relative;
+  z-index: 1;
+  max-width: 1720px;
+  margin: 0 auto;
+  padding: 90px 28px 60px;
+}
+
+.home-shell{
+  position: relative;
+  width: 100%;
+  max-width: none;
+}
+
+.page--home{
+  z-index: 1;
+}
+
+.page--home > .gallery,
+.page--home > .contact{
+  position: relative;
+  z-index: 1;
+}
+
+.trees--home{
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  min-height: 100%;
+  overflow: visible;
+}
+
+.tree{
+  position: absolute;
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  pointer-events: none;
+  opacity: .88;
+}
+
+.tree--1{
+  top: 125px;
+  right: 0;
+}
+
+.tree--2{
+  left: 0;
+  bottom: 0;
+  top: auto;
+  right: auto;
+  margin: 0;
+}
