@@ -8,7 +8,6 @@
  * — projects: все страницы кейсов (панк, существо, колба, дом, гном)
  */
 @import url("./css/tokens.css");
-@import url("./css/fonts.css");
 @import url("./css/base.css");
 @import url("./css/header.css");
 @import url("./css/home.css");
@@ -19,3 +18,33 @@
 @import url("./css/lightbox.css");
 @import url("./css/fantasy.css");
 @import url("./css/mobile.css");
+
+@font-face{
+  font-family: "CC Yuletide Log";
+  src: local("CC Yuletide Log Bold"),
+       local("CCYuletideLog-Bold"),
+       url("./fonts/CC%20Yuletide%20Log%20Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face{
+  font-family: "Goudy Old Style";
+  src: local("Goudy Old Style Regular"),
+       local("GoudyOldStyle-Regular"),
+       url("./fonts/Goudy%20Old%20Style%20Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face{
+  font-family: "Goudy Old Style";
+  src: local("Goudy Old Style Bold"),
+       local("GoudyOldStyle-Bold"),
+       url("./fonts/Goudy%20Old%20Style%20Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
