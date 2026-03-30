@@ -1,0 +1,119 @@
+/*
+  Телефон (≤640px): основной текст 16px, заголовки 24px, шапка 24–32px.
+*/
+
+@media (max-width: 640px){
+  html{
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body{
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  /* Шапка: в пределах 24–32px (здесь 24px, как у заголовков страницы) */
+  .header .nav__link,
+  .header .nav__title{
+    font-size: 24px;
+    line-height: 1.15;
+  }
+
+  /* Главная: названия проектов */
+  .card__title{
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  /* Блок контактов */
+  .contact__title{
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .contact__link{
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  /* Кейсы: главные заголовки и подзаголовки блоков */
+  .punk-main__title,
+  .creature-main__title,
+  .kolba-main__title,
+  .house-main__title,
+  .gnome-main__title{
+    font-size: 24px;
+    line-height: 1.15;
+  }
+
+  .punk-main__programs-title,
+  .creature-main__programs-title,
+  .kolba-main__programs-title,
+  .house-main__programs-title,
+  .gnome-main__programs-title{
+    font-size: 24px;
+    line-height: 1.15;
+  }
+
+  /* Кейсы: основной текст абзацев */
+  .punk-main__text,
+  .creature-main__text,
+  .kolba-main__text,
+  .house-main__text,
+  .gnome-main__text{
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  /* Навигация между проектами — как обычный текст */
+  .punk-project-nav__link{
+    font-size: 16px;
+    line-height: 1.35;
+  }
+
+  /* Страница «Обо мне» */
+  .about__title{
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .about__text{
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .about-hero__name-line{
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .about-hero__text{
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .skills-band__title{
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .skills-list{
+    font-size: 16px;
+    line-height: 1.45;
+  }
+
+  .activities__title{
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .activity-fig--travel-copy,
+  .activity-fig--theatre-copy{
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .to-top__label{
+    font-size: 16px;
+  }
+}

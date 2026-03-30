@@ -1,0 +1,63 @@
+/* Блок «Связаться со мной» на главной и страницах кейсов */
+
+.contact{
+  padding: 90px 0 40px;
+  text-align: center;
+}
+
+.contact__title{
+  margin: 0 0 34px;
+  font-family: "CC Yuletide Log", "Goudy Old Style", Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 1.1;
+}
+
+.contact__links{
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 708px;
+  margin: 0 auto;
+  padding: 0 8px;
+}
+
+.contact__link{
+  font-family: "Goudy Old Style", Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-size: 32px;
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  border-radius: 0;
+  background: transparent;
+  transition: transform .15s ease;
+}
+
+.contact__link:active{
+  transform: translateY(1px);
+}
+
+.contact--about{
+  margin-top: 288px;
+  padding-top: 0;
+}
+
+@media (max-width: 1200px){
+  .contact__title{
+    font-size: 64px;
+  }
+  .contact__links{
+    max-width: 640px;
+  }
+}
+
+@media (max-width: 640px){
+  .contact__links{
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .contact__link{
+    text-align: center;
+  }
+}

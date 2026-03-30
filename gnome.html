@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Гном — Леоненко Дарья</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body id="top" class="body--gnome">
+    <header class="header">
+      <nav class="nav" aria-label="Основная навигация">
+        <a class="nav__link" href="./index.html">Главная</a>
+        <div class="nav__title" aria-label="Профессия и имя">
+          3D художник<br />
+          Леоненко Дарья
+        </div>
+        <a class="nav__link" href="./about.html">Обо мне</a>
+      </nav>
+    </header>
+
+    <div class="gnome-shell">
+      <div class="trees trees--punk" aria-hidden="true">
+        <img class="tree tree--punk5" src="./img/tree5.png" alt="" />
+      </div>
+
+      <main class="page page--gnome" aria-label="Кейс: Гном">
+        <div class="gnome-main">
+          <h1 class="gnome-main__title font-display">Гном</h1>
+
+          <div class="gnome-main__track">
+            <div class="gnome-main__row--2">
+              <img
+                class="gnome-main__photo gnome-main__photo--hero"
+                src="./img/gnome.png"
+                alt=""
+                width="828"
+                height="722"
+                loading="lazy"
+                decoding="async"
+              />
+              <img
+                class="gnome-main__photo gnome-main__photo--hero"
+                src="./img/gnome2.png"
+                alt=""
+                width="828"
+                height="722"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+
+            <div class="gnome-main__text--wide">
+              <p class="gnome-main__text">
+                Модель была создана с целью практики создания и настройки волос в Blender. В процессе работы
+                основное внимание уделялось изучению системы волос, настройке параметров прядей, их формы,
+                плотности и поведения. Также были проработаны аспекты укладки и визуального восприятия
+                волос, что позволило лучше понять принципы их реалистичного отображения.
+              </p>
+            </div>
+
+            <section class="gnome-main__programs" aria-label="Программы">
+              <h2 class="gnome-main__programs-title font-bold">Программы:</h2>
+              <div class="gnome-main__icons">
+                <img src="./img/blender.png" alt="" width="118" height="88" decoding="async" />
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <nav class="punk-project-nav" aria-label="Навигация по проектам">
+          <a class="punk-project-nav__link" href="./house.html">
+            <img src="./img/left.svg" alt="" width="126" height="53" decoding="async" />
+            <span class="punk-project-nav__label">Предыдущий проект</span>
+          </a>
+          <a class="punk-project-nav__link punk-project-nav__link--center" href="#top">
+            <img
+              class="punk-project-nav__up-icon"
+              src="./img/up.svg"
+              alt=""
+              width="92"
+              height="38"
+              decoding="async"
+            />
+            <span class="punk-project-nav__label">Наверх</span>
+          </a>
+          <a class="punk-project-nav__link punk-project-nav__link--next" href="./index.html">
+            <span class="punk-project-nav__label">Следующий проект</span>
+            <img src="./img/right.svg" alt="" width="126" height="53" decoding="async" />
+          </a>
+        </nav>
+
+        <section class="contact" id="contact" aria-label="Связаться со мной">
+          <h2 class="contact__title">Связаться со мной</h2>
+          <div class="contact__links">
+            <a class="contact__link" href="mailto:idashaleonenko@gmail.com">Gmail</a>
+            <a class="contact__link" href="https://t.me/Difii" target="_blank" rel="noreferrer"
+              >Telegram</a
+            >
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>

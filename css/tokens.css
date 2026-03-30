@@ -1,0 +1,21 @@
+/* Дизайн-токены: цвета, радиусы, тени, кривые анимации */
+:root{
+  --bg: #fdfde5;
+  --text: #1c1c1c;
+  --muted: rgba(0, 0, 0, .7);
+  --accent: #9ca47e;
+  --card-radius: 16px;
+  /* Кейсы / блоки с макетной «внутренней» тенью */
+  --shadow: inset 0 -130px 92px rgba(0, 0, 0, .25);
+  /* Главная: мягкая внешняя тень без затемнения картинки */
+  --shadow-gallery-card:
+    0 18px 40px rgba(28, 28, 28, .09),
+    0 4px 12px rgba(28, 28, 28, .05);
+  --shadow-gallery-card-hover:
+    0 28px 56px rgba(28, 28, 28, .12),
+    0 8px 20px rgba(28, 28, 28, .07);
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-m: 0.55s;
+  --duration-s: 0.35s;
+}

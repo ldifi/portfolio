@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>3D художник — Леоненко Дарья</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav" aria-label="Основная навигация">
+        <a class="nav__link nav__link--active" href="./index.html">Главная</a>
+        <div class="nav__title" aria-label="Профессия и имя">
+          3D художник<br />
+          Леоненко Дарья
+        </div>
+        <a class="nav__link" href="./about.html">Обо мне</a>
+      </nav>
+    </header>
+
+    <div class="home-shell">
+      <div class="trees trees--home" aria-hidden="true">
+        <img class="tree tree--1" src="./img/tree1.png" alt="" />
+        <img class="tree tree--2" src="./img/tree2.png" alt="" />
+      </div>
+      <main class="page page--home" id="home">
+        <section class="gallery" aria-label="Работы">
+          <div class="gallery__grid">
+            <article class="card card--tall card--pos-punk">
+              <a class="card__link" href="./punk.html">
+                <div class="card__media card__media--punk" role="img" aria-label="Девочка-панк"></div>
+                <h3 class="card__title">Девочка-панк</h3>
+              </a>
+            </article>
+
+            <article class="card card--mid card--pos-house">
+              <a class="card__link" href="./house.html">
+                <div class="card__media card__media--house" role="img" aria-label="Дом Марселин"></div>
+                <h3 class="card__title">Дом Марселин</h3>
+              </a>
+            </article>
+
+            <article class="card card--wide card--pos-gnome">
+              <a class="card__link" href="./gnome.html">
+                <div class="card__media card__media--gnome" role="img" aria-label="Гном"></div>
+                <h3 class="card__title">Гном</h3>
+              </a>
+            </article>
+
+            <article class="card card--small card--pos-kolba">
+              <a class="card__link" href="./kolba.html">
+                <div class="card__media card__media--flask" role="img" aria-label="Колба"></div>
+                <h3 class="card__title">Колба</h3>
+              </a>
+            </article>
+
+            <article class="card card--small card--pos-creature">
+              <a class="card__link" href="./creature.html">
+                <div class="card__media card__media--creature" role="img" aria-label="Существо"></div>
+                <h3 class="card__title">Существо</h3>
+              </a>
+            </article>
+          </div>
+        </section>
+
+        <section class="contact" id="contact" aria-label="Связаться со мной">
+          <h2 class="contact__title">Связаться со мной</h2>
+          <div class="contact__links">
+            <a class="contact__link" href="mailto:idashaleonenko@gmail.com">Gmail</a>
+            <a class="contact__link" href="https://t.me/Difii" target="_blank" rel="noreferrer"
+              >Telegram</a
+            >
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>

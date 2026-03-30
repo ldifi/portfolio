@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Обо мне — Леоненко Дарья</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body id="top">
+    <header class="header">
+      <nav class="nav" aria-label="Основная навигация">
+        <a class="nav__link" href="./index.html">Главная</a>
+        <div class="nav__title" aria-label="Профессия и имя">
+          3D художник<br />
+          Леоненко Дарья
+        </div>
+        <a class="nav__link nav__link--active" href="./about.html">Обо мне</a>
+      </nav>
+    </header>
+
+    <div class="about-shell">
+      <div class="tree-decor-wrap tree-decor-wrap--bg" aria-hidden="true">
+        <img class="tree-decor tree-decor--4" src="./img/tree4.png" alt="" />
+      </div>
+      <main class="page page--about">
+        <section class="about-hero" aria-label="О художнике">
+          <h1 class="about-hero__name" aria-label="Леоненко Дарья">
+            <span class="about-hero__name-line about-hero__name-line--top">Леоненко</span>
+            <span class="about-hero__name-line about-hero__name-line--bottom">Дарья</span>
+          </h1>
+          <p class="about-hero__text">
+            Я 3D-художник с большой страстью к созданию моделей для игр и видеороликов. Стремлюсь к постоянному развитию навыков и вниманию к деталям, чтобы создавать качественные и визуально выразительные работы.
+          </p>
+          <div class="about-hero__photo-wrap">
+            <img
+              class="about-hero__photo"
+              src="./img/%D1%84%D0%BE%D1%82%D0%BE.png"
+              alt="Портрет"
+              width="544"
+              height="662"
+            />
+          </div>
+        </section>
+
+        <section class="skills-band" aria-label="Программы и навыки">
+          <div class="skills-band__column">
+            <h2 class="skills-band__title">Программы</h2>
+            <ul class="skills-list">
+              <li>
+                <span class="skills-list__icon skills-list__icon--zbrush" aria-hidden="true"></span>
+                Zbrush
+              </li>
+              <li>
+                <span class="skills-list__icon skills-list__icon--substance" aria-hidden="true"></span>
+                Substance Painter
+              </li>
+              <li>
+                <span class="skills-list__icon skills-list__icon--blender" aria-hidden="true"></span>
+                Blender
+              </li>
+            </ul>
+          </div>
+          <div class="skills-band__column">
+            <h2 class="skills-band__title">Навыки</h2>
+            <ul class="skills-list">
+              <li>Текстурирование</li>
+              <li>Ретопология</li>
+              <li>Скульптинг</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="activities activities--figma" aria-label="Другие активности">
+          <div class="activities__canvas">
+            <h2 class="activities__title">Другие активности</h2>
+
+            <div class="activity-fig activity-fig--travel-media">
+              <div class="activity-travel-wrap">
+                <div class="activity__image activity__image--travel" role="img" aria-label="Путешествия"></div>
+              </div>
+            </div>
+
+            <p class="activity-fig activity-fig--travel-copy">
+              Путешествия занимают важное место в моей жизни и напрямую влияют на мое творчество. Новые места, культура и архитектура дают мне свежие визуальные впечатления и помогают расширять художественное мышление.
+            </p>
+
+            <div class="activity-fig activity-fig--theatre-decor" aria-hidden="true">
+              <img
+                class="activity-tree activity-tree--3"
+                src="./img/tree3.png"
+                alt=""
+                aria-hidden="true"
+              />
+            </div>
+
+            <div class="activity-fig activity-fig--theatre-media">
+              <div class="activity__image activity__image--theatre" role="img" aria-label="Театральный клуб"></div>
+            </div>
+
+            <p class="activity-fig activity-fig--theatre-copy">
+              Я также участвую в театральном клубе, где принимаю участие в постановках и репетиционном процессе. Это включает работу с командой, подготовку к выступлениям и участие в создании сценических проектов. Такой опыт помогает развивать ответственность, дисциплину и навыки взаимодействия с другими участниками.
+            </p>
+          </div>
+        </section>
+
+        <section class="contact contact--about" id="contact" aria-label="Связаться со мной">
+          <h2 class="contact__title">Связаться со мной</h2>
+          <div class="contact__links">
+            <a class="contact__link" href="mailto:idashaleonenko@gmail.com">Gmail</a>
+            <a class="contact__link" href="https://t.me/Difii" target="_blank" rel="noreferrer">Telegram</a>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <a class="to-top to-top--about" href="#top" aria-label="Наверх">
+      <img src="./img/up1.svg" alt="" width="53" height="126" decoding="async" />
+      <span class="to-top__label">Наверх</span>
+    </a>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
