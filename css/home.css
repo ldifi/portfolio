@@ -1,0 +1,221 @@
+/* Главная: сетка карточек проектов */
+
+.page--home .contact{
+  margin-top: 160px;
+}
+
+.gallery__grid{
+  align-items: start;
+}
+
+.card{
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 12px;
+  justify-items: center;
+}
+
+/* Ссылка оборачивает превью + заголовок; display:contents — элементы попадают в сетку .card */
+.card__link{
+  display: contents;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card__media{
+  width: 100%;
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow-gallery-card);
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  min-height: 230px;
+  background-size: cover;
+  background-position: center;
+}
+
+/*
+  Превью карточек: кириллические имена файлов в url — процентное кодирование (стабильно в браузере).
+*/
+.card__media--punk{
+  background-image: url("../img/панк.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.card__media--flask{
+  background-image: url("../img/%D0%BA%D0%BE%D0%BB%D0%B1%D0%B0.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.card__media--creature{
+  background-image: url("../img/%D1%81%D1%83%D1%89%D0%B5%D1%81%D1%82%D0%B2%D0%BE.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.card__media--gnome{
+  background-image: url("../img/gnome2.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.card__media--house{
+  background-image: url("../img/home.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.card__title{
+  margin: 0;
+  font-family: "Goudy Old Style", Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: .2px;
+  text-align: center;
+  width: 100%;
+  transition: color var(--duration-s) var(--ease-soft), transform var(--duration-m) var(--ease-smooth);
+}
+
+.card--small .card__media{ height: 273px; }
+.card--wide .card__media{ height: 273px; }
+.card--mid .card__media{ height: 376px; }
+.card--tall .card__media{ height: 571px; }
+
+/*
+  Десктоп: абсолютное позиционирование по макету Figma Group 53:37.
+  Холст группы 1680×775; координаты карточек — абсолют на том же холсте, минус смещение группы (120, 252).
+  left / top — доли от 1680 и 775; height карточки — доля от 775 (высота холста).
+*/
+@media (min-width: 1201px){
+  .gallery__grid{
+    display: block;
+    position: relative;
+    width: min(1680px, 100%);
+    max-width: 1680px;
+    margin: 0 auto;
+    aspect-ratio: 1680 / 775;
+  }
+
+  .gallery__grid .card{
+    position: absolute;
+    box-sizing: border-box;
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  /* Колба */
+  .card--pos-kolba{
+    left: 0;
+    top: calc(22 / 775 * 100%);
+    width: calc(260 / 1680 * 100%);
+    height: calc(326 / 775 * 100%);
+  }
+
+  /* Гном (слот был у «широкой» карточки справа) */
+  .card--pos-gnome{
+    left: calc(1278 / 1680 * 100%);
+    top: 0;
+    width: calc(402 / 1680 * 100%);
+    height: calc(326 / 775 * 100%);
+  }
+
+  /* Девочка-панк */
+  .card--pos-punk{
+    left: calc(450 / 1680 * 100%);
+    top: calc(71 / 775 * 100%);
+    width: calc(544 / 1680 * 100%);
+    height: calc(633 / 775 * 100%);
+  }
+
+  /* Дом Марселин */
+  .card--pos-house{
+    left: calc(1112 / 1680 * 100%);
+    top: calc(346 / 775 * 100%);
+    width: calc(358.18 / 1680 * 100%);
+    height: calc(424 / 775 * 100%);
+  }
+
+  /* Существо */
+  .card--pos-creature{
+    left: calc(142 / 1680 * 100%);
+    top: calc(449 / 775 * 100%);
+    width: calc(260 / 1680 * 100%);
+    height: calc(326 / 775 * 100%);
+  }
+
+  .card--pos-kolba .card__media,
+  .card--pos-gnome .card__media,
+  .card--pos-creature .card__media{
+    width: 100%;
+    height: calc(273 / 326 * 100%);
+    flex-shrink: 0;
+  }
+
+  .card--pos-punk .card__media{
+    width: 100%;
+    height: calc(571 / 633 * 100%);
+    flex-shrink: 0;
+  }
+
+  .card--pos-house .card__media{
+    width: 100%;
+    height: calc(376 / 424 * 100%);
+    flex-shrink: 0;
+  }
+
+  .gallery__grid .card__title{
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 1200px){
+  .gallery__grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 28px;
+    width: 100%;
+    max-width: none;
+    aspect-ratio: unset;
+  }
+
+  .gallery__grid .card{
+    position: relative;
+    display: grid;
+    left: auto !important;
+    top: auto !important;
+    width: auto !important;
+    height: auto !important;
+  }
+
+  .card--pos-kolba,
+  .card--pos-creature,
+  .card--pos-punk,
+  .card--pos-gnome,
+  .card--pos-house{
+    grid-column: auto;
+    grid-row: auto;
+    margin-top: 0;
+  }
+
+  .card--tall .card__media{
+    height: 420px;
+  }
+
+  .card__title{
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 640px){
+  .gallery__grid{
+    grid-template-columns: 1fr;
+  }
+}
